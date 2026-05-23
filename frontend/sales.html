@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Sales Analytics
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="./css/sales.css"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="sales-container">
+
+        <div class="topbar">
+
+            <h1>
+                Sales Analytics
+            </h1>
+
+            <button
+                onclick="
+                window.location.href=
+                './dashboard.html'
+                "
+            >
+                Dashboard
+            </button>
+
+        </div>
+
+        <!-- ANALYTICS -->
+
+        <div class="analytics-grid">
+
+            <div class="card">
+
+                <h2>
+                    Total Revenue
+                </h2>
+
+                <h1 id="totalRevenue">
+                    ₹0
+                </h1>
+
+            </div>
+
+            <div class="card">
+
+                <h2>
+                    Total Invoices
+                </h2>
+
+                <h1 id="totalInvoices">
+                    0
+                </h1>
+
+            </div>
+
+        </div>
+
+        <!-- CHARTS -->
+
+        <div class="charts-grid">
+
+            <div class="chart-card">
+
+                <h2>
+                    Revenue Chart
+                </h2>
+
+                <canvas id="revenueChart">
+
+                </canvas>
+
+            </div>
+
+            <div class="chart-card">
+
+                <h2>
+                    Invoice Trend
+                </h2>
+
+                <canvas id="invoiceChart">
+
+                </canvas>
+
+            </div>
+
+        </div>
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search customer..."
+            >
+
+        </div>
+
+        <!-- SALES LIST -->
+
+        <div
+            class="sales-list"
+            id="salesList"
+        >
+
+        </div>
+
+    </div>
+
+    <!-- INVOICE MODAL -->
+
+    <div
+        class="invoice-modal"
+        id="invoiceModal"
+    >
+
+        <div class="invoice-box">
+
+            <div id="invoiceContent">
+
+            </div>
+
+            <div class="invoice-buttons">
+
+                <button
+                    class="print-btn"
+                    onclick="window.print()"
+                >
+                    Print
+                </button>
+
+                <button
+                    class="close-btn"
+                    onclick="closeInvoice()"
+                >
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./js/sales.js"></script>
+
+</body>
+
+</html>

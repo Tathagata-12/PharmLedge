@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - PharmLedge</title>
+
+    <link rel="stylesheet" href="./css/auth.css">
+
+</head>
+
+<body>
+
+    <!-- GLOW -->
+    <div class="bg-glow glow1"></div>
+    <div class="bg-glow glow2"></div>
+
+    <!-- REGISTER CONTAINER -->
+
+    <div class="auth-container">
+
+        <div class="auth-card">
+
+            <h1>Create Store Account</h1>
+
+            <p>
+                Start managing your pharmacy smartly.
+            </p>
+
+            <form id="registerForm">
+
+                <input
+                    type="text"
+                    id="shop_name"
+                    placeholder="Store Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="owner_name"
+                    placeholder="Owner Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="phone"
+                    placeholder="Phone Number"
+                    required
+                >
+
+                <button type="submit">
+                    Register
+                </button>
+
+            </form>
+
+            <div class="bottom-text">
+
+                Already have an account?
+
+                <a href="./login.html">
+                    Login
+                </a>
+
+            </div>
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+    <script src="./js/register.js"></script>
+
+</body>
+
+</html>

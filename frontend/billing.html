@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Billing - PharmLedge</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/billing.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="billing-container">
+
+        <!-- LEFT -->
+
+        <div class="billing-left">
+
+            <div class="topbar">
+
+                <h1>
+                    Billing System
+                </h1>
+
+                <button
+                    onclick="
+                    window.location.href=
+                    './dashboard.html'
+                    "
+                >
+                    Dashboard
+                </button>
+
+            </div>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="medicineSearch"
+                    placeholder="Search medicine..."
+                >
+
+            </div>
+
+            <div
+                class="medicine-list"
+                id="medicineList"
+            >
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="billing-right">
+
+            <h2>
+                Invoice
+            </h2>
+
+            <div
+                class="cart-items"
+                id="cartItems"
+            >
+
+            </div>
+
+            <div class="invoice-summary">
+
+                <div class="summary-row">
+
+                    <span>
+                        Grand Total
+                    </span>
+
+                    <span id="grandTotal">
+                        ₹0
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button
+                class="checkout-btn"
+                onclick="checkout()"
+            >
+                Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- INVOICE MODAL -->
+
+    <div
+        class="invoice-modal"
+        id="invoiceModal"
+    >
+
+        <div class="invoice-box">
+
+            <div id="invoiceContent">
+
+            </div>
+
+            <div class="invoice-buttons">
+
+                <button
+                    class="print-btn"
+                    onclick="printInvoice()"
+                >
+                    Print
+                </button>
+
+                <button
+                    class="close-btn"
+                    onclick="closeInvoice()"
+                >
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./js/billing.js"></script>
+
+</body>
+
+</html>

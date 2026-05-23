@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Medicine</title>
+
+    <link rel="stylesheet" href="./css/add-medicine.css">
+
+</head>
+
+<body>
+
+    <!-- GLOW -->
+
+    <div class="glow glow1"></div>
+    <div class="glow glow2"></div>
+
+    <div class="container">
+
+        <div class="form-card">
+
+            <h1>Add Medicine</h1>
+
+            <p>
+                Add medicine stock with vendor and batch details.
+            </p>
+
+            <form id="medicineForm">
+
+                <div class="grid">
+
+                    <input
+                        type="text"
+                        id="medicine_name"
+                        placeholder="Medicine Name"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="category"
+                        placeholder="Category"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="description"
+                        placeholder="Description"
+                    >
+
+                    <input
+                        type="text"
+                        id="vendor_name"
+                        placeholder="Vendor Name"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="phone"
+                        placeholder="Vendor Phone"
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Vendor Email"
+                    >
+
+                    <input
+                        type="text"
+                        id="address"
+                        placeholder="Vendor Address"
+                    >
+
+                    <input
+                        type="text"
+                        id="batch_no"
+                        placeholder="Batch Number"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="stock"
+                        placeholder="Stock"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="purchase_price"
+                        placeholder="Purchase Price"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="selling_price"
+                        placeholder="Selling Price"
+                        required
+                    >
+
+                    <input
+                        type="date"
+                        id="manufacture_date"
+                        required
+                    >
+
+                    <input
+                        type="date"
+                        id="expiry_date"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit">
+                    Save Medicine
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+    <script src="./js/addMedicine.js"></script>
+
+</body>
+
+</html>

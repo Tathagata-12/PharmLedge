@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard - PharmLedge</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/dashboard.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            PharmLedge
+        </div>
+
+        <nav>
+
+            <a href="./dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="./add-medicine.html">
+                Add Medicine
+            </a>
+
+            <a href="./billing.html">
+                Billing
+            </a>
+
+            <a href="./sales.html">
+                Sales History
+            </a>
+
+            <a href="#">
+                Analytics
+            </a>
+
+            <a href="#">
+                Vendors
+            </a>
+
+        </nav>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h1 id="welcomeText">
+                    Welcome
+                </h1>
+
+                <p>
+                    Smart pharmacy inventory dashboard.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- STATS -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <p>Total Medicines</p>
+
+                <h2 id="totalMedicines">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <p>Total Stock</p>
+
+                <h2 id="totalStock">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <p>Total Vendors</p>
+
+                <h2 id="totalVendors">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <p>Low Stock Alerts</p>
+
+                <h2 id="lowStock">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <p>Near Expiry</p>
+
+                <h2 id="nearExpiry">
+                    0
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- TABLE SECTION -->
+
+        <section class="table-section">
+
+            <div class="table-header">
+
+                <h2>
+                    Medicines Inventory
+                </h2>
+
+                <div class="table-actions">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search medicines..."
+                    >
+
+                    <select id="categoryFilter">
+
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                    </select>
+
+                    <button
+                        onclick="
+                        window.location.href=
+                        './add-medicine.html'
+                        "
+                    >
+                        Add Medicine
+                    </button>
+
+                </div>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Medicine
+                        </th>
+
+                        <th>
+                            Category
+                        </th>
+
+                        <th>
+                            Vendor
+                        </th>
+
+                        <th>
+                            Stock
+                        </th>
+
+                        <th>
+                            Price
+                        </th>
+
+                        <th>
+                            Expiry
+                        </th>
+
+                        <th>
+                            Actions
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="medicineTableBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <!-- EDIT MODAL -->
+
+    <div
+        class="modal"
+        id="editModal"
+    >
+
+        <div class="modal-content">
+
+            <h2>
+                Edit Medicine
+            </h2>
+
+            <input
+                type="text"
+                id="editMedicineName"
+                placeholder="Medicine Name"
+            >
+
+            <input
+                type="text"
+                id="editCategory"
+                placeholder="Category"
+            >
+
+            <input
+                type="number"
+                id="editStock"
+                placeholder="Stock"
+            >
+
+            <input
+                type="number"
+                id="editPrice"
+                placeholder="Selling Price"
+            >
+
+            <div class="modal-buttons">
+
+                <button
+                    class="save-btn"
+                    onclick="updateMedicine()"
+                >
+                    Save
+                </button>
+
+                <button
+                    class="cancel-btn"
+                    onclick="closeModal()"
+                >
+                    Cancel
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./js/dashboard.js"></script>
+
+</body>
+
+</html>
