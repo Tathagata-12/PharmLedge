@@ -6,8 +6,7 @@ const db = require("./config/db.js");
 
 const authRoutes = require("./routes/authRoutes");
 const medicineRoutes = require("./routes/medicineRoutes");
-//const salesRoute=require("./routes/salesRoutes");
-
+const salesRoutes = require("./routes/salesRoutes");
 
 const app = express();
 
@@ -23,9 +22,7 @@ app.use("/api/auth", authRoutes);
 
 app.use("/api/medicines", medicineRoutes);
 
-//app.use("/api/sales",salesRoutes);
-
-
+app.use("/api/sales", salesRoutes);
 
 // TEST ROUTE
 
