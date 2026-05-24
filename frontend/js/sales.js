@@ -1,5 +1,5 @@
 const API_URL =
-"http://localhost:8000/api/sales";
+"https://pharmledge-backend.onrender.com/api/sales";
 
 const salesTable =
 document.getElementById("salesTable");
