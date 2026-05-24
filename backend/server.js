@@ -2,10 +2,12 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
-const db = require("./config/db");
+const db = require("./config/db.js");
 
 const authRoutes = require("./routes/authRoutes");
 const medicineRoutes = require("./routes/medicineRoutes");
+//const salesRoute=require("./routes/salesRoutes");
+
 
 const app = express();
 
@@ -20,6 +22,10 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 
 app.use("/api/medicines", medicineRoutes);
+
+//app.use("/api/sales",salesRoutes);
+
+
 
 // TEST ROUTE
 

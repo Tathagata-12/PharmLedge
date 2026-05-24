@@ -3,23 +3,12 @@ const express = require("express");
 const router = express.Router();
 
 const {
+    registerUser,
+    loginUser
+} = require("../controllers/authController");
 
-    addMedicine,
-    getMedicines,
-    getDashboardStats,
-    deleteMedicine,
-    updateMedicine
+router.post("/register", registerUser);
 
-} = require("../controllers/medicineController");
-
-router.post("/add", addMedicine);
-
-router.get("/", getMedicines);
-
-router.get("/stats", getDashboardStats);
-
-router.delete("/:id", deleteMedicine);
-
-router.put("/:id", updateMedicine);
+router.post("/login", loginUser);
 
 module.exports = router;

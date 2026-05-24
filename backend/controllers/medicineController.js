@@ -609,3 +609,33 @@ exports.getInvoiceDetails = (req, res) => {
     });
 
 };
+
+exports.getAnalytics = (req, res) => {
+
+    const query = `
+
+        SELECT
+
+            COUNT(*) AS total_sales,
+
+            SUM(total_amount) AS total_revenue,
+
+            AVG(total_amount) AS average_sale
+
+        FROM sales
+
+    `;
+
+    db.query(query, (err, result) => {
+
+        if(err){
+
+            return res.status(500).json(err);
+
+        }
+
+        res.status(200).json(result[0]);
+
+    });
+
+};

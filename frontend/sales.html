@@ -5,156 +5,91 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>
-        Sales Analytics
-    </title>
+    <title>Sales History</title>
 
-    <link
-        rel="stylesheet"
-        href="./css/sales.css"
-    >
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sales.css">
 
 </head>
 
 <body>
 
-    <div class="sales-container">
+    <div class="bg-glow glow1"></div>
+    <div class="bg-glow glow2"></div>
 
-        <div class="topbar">
+    <nav class="navbar">
+
+        <div class="logo">
+            PharmLedge
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+            <a href="sales.html">Sales</a>
+            <a href="analytics.html">Analytics</a>
+            <a href="vendors.html">Vendors</a>
+
+        </div>
+
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <p class="small-title">
+                SALES MANAGEMENT
+            </p>
 
             <h1>
-                Sales Analytics
+                Sales History
             </h1>
 
-            <button
-                onclick="
-                window.location.href=
-                './dashboard.html'
-                "
-            >
-                Dashboard
-            </button>
+            <div class="glass-card">
 
-        </div>
+                <table class="sales-table">
 
-        <!-- ANALYTICS -->
+                    <thead>
 
-        <div class="analytics-grid">
+                        <tr>
 
-            <div class="card">
+                            <th>Customer</th>
+                            <th>Total</th>
+                            <th>Date</th>
+                            <th>Invoice</th>
 
-                <h2>
-                    Total Revenue
-                </h2>
+                        </tr>
 
-                <h1 id="totalRevenue">
-                    ₹0
-                </h1>
+                    </thead>
 
-            </div>
+                    <tbody id="salesTable">
 
-            <div class="card">
+                    </tbody>
 
-                <h2>
-                    Total Invoices
-                </h2>
-
-                <h1 id="totalInvoices">
-                    0
-                </h1>
+                </table>
 
             </div>
 
         </div>
 
-        <!-- CHARTS -->
+    </section>
 
-        <div class="charts-grid">
+    <div id="invoiceModal" class="modal">
 
-            <div class="chart-card">
+        <div class="modal-content">
 
-                <h2>
-                    Revenue Chart
-                </h2>
+            <span class="close"
+                  onclick="closeInvoice()">
 
-                <canvas id="revenueChart">
+                &times;
 
-                </canvas>
-
-            </div>
-
-            <div class="chart-card">
-
-                <h2>
-                    Invoice Trend
-                </h2>
-
-                <canvas id="invoiceChart">
-
-                </canvas>
-
-            </div>
-
-        </div>
-
-        <!-- SEARCH -->
-
-        <div class="search-box">
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search customer..."
-            >
-
-        </div>
-
-        <!-- SALES LIST -->
-
-        <div
-            class="sales-list"
-            id="salesList"
-        >
-
-        </div>
-
-    </div>
-
-    <!-- INVOICE MODAL -->
-
-    <div
-        class="invoice-modal"
-        id="invoiceModal"
-    >
-
-        <div class="invoice-box">
+            </span>
 
             <div id="invoiceContent">
-
-            </div>
-
-            <div class="invoice-buttons">
-
-                <button
-                    class="print-btn"
-                    onclick="window.print()"
-                >
-                    Print
-                </button>
-
-                <button
-                    class="close-btn"
-                    onclick="closeInvoice()"
-                >
-                    Close
-                </button>
 
             </div>
 

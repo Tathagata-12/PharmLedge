@@ -1,0 +1,50 @@
+.analytics-container{
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap: 30px;
+
+    margin-top: 40px;
+
+}
+
+.analytics-box{
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(14px);
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+}
+
+.analytics-box h2{
+
+    color: #94a3b8;
+
+    margin-bottom: 15px;
+
+}
+
+.analytics-box h1{
+
+    font-size: 52px;
+
+    background: linear-gradient(
+        135deg,
+        #3b82f6,
+        #06b6d4
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
