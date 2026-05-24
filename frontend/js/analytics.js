@@ -2,10 +2,7 @@ async function loadAnalytics(){
 
     try{
 
-        const response =
-        await fetch(
-            "http://localhost:8000/api/sales"
-        );
+        const API_URL = "https://YOUR-RENDER-URL.onrender.com/api/analytics";
 
         const sales =
         await response.json();
